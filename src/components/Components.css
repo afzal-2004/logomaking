@@ -1,0 +1,12 @@
+.sidebarmain {
+    @apply min-w-[250px] h-[90vh] bg-red-200 mr-1;
+    box-shadow: 2px 2px 2px slategray;
+}
+
+.IconsMain {
+    @apply bg-slate-200 p-5 w-[40%] overflow-scroll max-h-screen overflow-x-hidden;
+}
+
+.IconsMain::-webkit-scrollbar {
+    width: 0px;
+}

@@ -19,6 +19,13 @@ body {
 }
 
 button {
+  padding: 10px;
+  background-color: #F15757;
+  border-radius: 10px;
+}
 
-  color: #F15757;
+.utilityClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
