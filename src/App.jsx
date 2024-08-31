@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Navbar } from "./components/Navbar";
 import { Sidebar } from "./components/Sidebar";
-
+import { IconPreview } from "./components/IconPreview";
 import { AppContext } from "./context/createcontext";
 import { Icons } from "./components/Icons";
 import { Background } from "./components/Background";
@@ -21,6 +21,7 @@ function App() {
         ) : (
           <Upgrade />
         )}
+        <IconPreview />
       </div>
     </>
   );

@@ -1,5 +1,5 @@
 .sidebarmain {
-    @apply min-w-[250px] h-[90vh] bg-red-200 mr-1;
+    @apply min-w-[20%] h-[90vh] bg-red-200 mr-1;
     box-shadow: 2px 2px 2px slategray;
 }
 

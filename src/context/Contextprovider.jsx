@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AppContext } from "./createcontext";
 
 export const ContextProvider = ({ children }) => {
@@ -7,7 +7,31 @@ export const ContextProvider = ({ children }) => {
   const [size, setsize] = useState(50);
   const [Rotation, setRotation] = useState(0);
   const [color, setColor] = useState("rgba(255,255,255,1)");
-  console.log(color);
+
+  const [Rounded, setRounded] = useState(10);
+  const [Padding, setPadding] = useState(0);
+  const [bgColor, setbgColor] = useState("rgba(255,255,255,1)");
+  console.log({ Rounded, Padding, bgColor });
+
+  const IconValue = {
+    Size: size,
+    Rotation: Rotation,
+    color: color,
+  };
+  useEffect(() => {
+    localStorage.setItem("Value", JSON.stringify(IconValue));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [size, Rotation, color]);
+  const backgroundValue = {
+    Rounded: Rounded,
+    Padding: Padding,
+    bgColor: bgColor,
+  };
+
+  useEffect(() => {
+    localStorage.setItem("BgValue", JSON.stringify(backgroundValue));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [Rounded, Padding, bgColor]);
 
   const value = {
     setsidebaricon,
@@ -18,6 +42,12 @@ export const ContextProvider = ({ children }) => {
     setRotation,
     color,
     setColor,
+    Rounded,
+    setRounded,
+    Padding,
+    setPadding,
+    bgColor,
+    setbgColor,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

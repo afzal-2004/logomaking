@@ -54,7 +54,7 @@ export const Icons = () => {
             }}
           />
         </div>
-        <div className=" mt-5">
+        <div className=" mt-5 flex justify-center  ">
           <ColorPicker
             value={color}
             onChange={setColor}
