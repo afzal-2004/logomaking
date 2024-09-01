@@ -16,6 +16,8 @@ body {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+  /* max-height: 100vh; */
+  @apply xl:max-h-[100vh]
 }
 
 button {

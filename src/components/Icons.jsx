@@ -12,47 +12,50 @@ export const Icons = () => {
         <h1 className="text-[19px]"> Icons</h1>
         <FaRegSmile className="text-[50px] bg-white  p-2 rounded-lg" />
 
-        <div className=" mt-5">
-          <p className=" flex  justify-between">
-            size
-            <span>{size}px</span>
-          </p>
+        <div>
+          <div className=" mt-5  ">
+            <p className=" flex  justify-between">
+              size
+              <span>{size}px</span>
+            </p>
 
-          <input
-            className=" border border-red-500 w-full"
-            type="range"
-            name="Size"
-            value={size}
-            min={33}
-            max={512}
-            id=""
-            onChange={(e) => {
-              const new_Value = e.target.value;
-              console.log(new_Value);
-              setsize(new_Value);
-            }}
-          />
-        </div>
-        <div className=" mt-5">
-          <p className=" flex  justify-between">
-            Rotate
-            <span>{Rotation}°</span>
-          </p>
+            <input
+              className="Iconsinput
+"
+              type="range"
+              name="Size"
+              value={size}
+              min={33}
+              max={512}
+              id=""
+              onChange={(e) => {
+                const new_Value = e.target.value;
 
-          <input
-            className=" border border-red-500 w-full"
-            type="range"
-            name="Size"
-            value={Rotation}
-            min="0"
-            max="360"
-            id=""
-            onChange={(e) => {
-              const new_Rotation = e.target.value;
-              console.log(new_Rotation);
-              setRotation(new_Rotation);
-            }}
-          />
+                setsize(new_Value);
+              }}
+            />
+          </div>
+          <div className=" mt-5">
+            <p className=" flex  justify-between">
+              Rotate
+              <span>{Rotation}°</span>
+            </p>
+
+            <input
+              className=" Iconsinput"
+              type="range"
+              name="Size"
+              value={Rotation}
+              min="0"
+              max="360"
+              id=""
+              onChange={(e) => {
+                const new_Rotation = e.target.value;
+                console.log(new_Rotation);
+                setRotation(new_Rotation);
+              }}
+            />
+          </div>
         </div>
         <div className=" mt-5 flex justify-center  ">
           <ColorPicker

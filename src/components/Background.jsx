@@ -7,7 +7,7 @@ export const Background = () => {
     useContext(AppContext);
   return (
     <>
-      <div className="IconsMain">
+      <div className="IconsMain ">
         <div>
           <p className="flex justify-between">
             Rounded <span>{Rounded}px</span>
@@ -23,7 +23,7 @@ export const Background = () => {
             onChange={(e) => {
               const newRounded = e.target.value;
               console.log(newRounded);
-              setRounded(newRounded);
+              setRounded(`${newRounded}`);
             }}
           />
         </div>

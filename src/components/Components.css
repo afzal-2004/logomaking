@@ -1,12 +1,28 @@
 .sidebarmain {
-    @apply min-w-[20%] h-[90vh] bg-red-200 mr-1;
+    @apply xl:min-w-[20%] md:min-w-[30%] h-[90vh] bg-red-200 mr-1;
     box-shadow: 2px 2px 2px slategray;
 }
 
 .IconsMain {
-    @apply bg-slate-200 p-5 w-[40%] overflow-scroll max-h-screen overflow-x-hidden;
+    @apply bg-slate-200 p-5 xl:w-[50%] overflow-scroll md:h-[45vh] xl:h-[90vh] overflow-x-hidden;
 }
 
 .IconsMain::-webkit-scrollbar {
     width: 0px;
+}
+
+.Iconsinput {
+    @apply border border-red-500 xl:w-full md:w-[50%];
+}
+
+.IconPreviewmain {
+    @apply p-4 bg-blue-300 xl:w-[50%] flex justify-center items-center;
+}
+
+.IconPreviewContainer {
+    @apply bg-blue-300 w-[350px] h-[350px] flex justify-center items-center;
+}
+
+.IconBacground {
+    @apply min-h-[200px] min-w-[200px] max-w-[350px] max-h-[350px] flex justify-center items-center;
 }

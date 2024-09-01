@@ -10,21 +10,20 @@ export const ContextProvider = ({ children }) => {
 
   const [Rounded, setRounded] = useState(10);
   const [Padding, setPadding] = useState(0);
-  const [bgColor, setbgColor] = useState("rgba(255,255,255,1)");
-  console.log({ Rounded, Padding, bgColor });
+  const [bgColor, setbgColor] = useState("rgba(55,55,55,1)");
 
   const IconValue = {
-    Size: size,
-    Rotation: Rotation,
-    color: color,
+    Size: `${size}px`,
+    Rotation: `${Rotation}`,
+    color: `${color}`,
   };
   useEffect(() => {
     localStorage.setItem("Value", JSON.stringify(IconValue));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [size, Rotation, color]);
   const backgroundValue = {
-    Rounded: Rounded,
-    Padding: Padding,
+    Rounded: `${Rounded}px`,
+    Padding: `${Padding}px`,
     bgColor: bgColor,
   };
 

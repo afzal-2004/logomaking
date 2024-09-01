@@ -1,19 +1,39 @@
+/* eslint-disable react/prop-types */
+import { FaRegSmile } from "react-icons/fa";
+
 export const IconPreview = () => {
   const Background = JSON.parse(localStorage.getItem("BgValue"));
-  console.log(Background);
+
   const styles = {
     backgroundColor: Background.bgColor,
     borderRadius: Background.Rounded,
     padding: Background.Padding,
   };
-  console.log(styles);
+  const IconsValue = JSON.parse(localStorage.getItem("Value"));
+  const iconStyle = {
+    Color: IconsValue.color,
+    Size: IconsValue.Size,
+    transform: `rotate(${IconsValue.Rotation})`,
+  };
+
   return (
     <>
-      <main className=" h-screen p-4 bg-blue-300 w-[40%] flex justify-center items-center">
-        <div className=" bg-slate-200 w-[350px] h-[350px]">
-          <div style={styles} className="w-[200px] h-[200px]"></div>
+      <main className="IconPreviewmain IconsMain">
+        <div className=" IconPreviewContainer">
+          <div style={styles} className="IconBacground">
+            <Icons
+              iconNode={FaRegSmile}
+              color={iconStyle.Color}
+              size={iconStyle.Size}
+              transform={iconStyle.transform}
+            />
+          </div>
         </div>
       </main>
     </>
   );
+};
+
+const Icons = ({ iconNode: LucideIcon, color, size, transform }) => {
+  return <LucideIcon color={color} size={size} transform={transform} />;
 };

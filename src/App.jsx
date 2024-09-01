@@ -14,14 +14,16 @@ function App() {
       <Navbar />
       <div className="flex">
         <Sidebar />
-        {sidebaricon === 0 ? (
-          <Icons />
-        ) : sidebaricon === 1 ? (
-          <Background />
-        ) : (
-          <Upgrade />
-        )}
-        <IconPreview />
+        <div className="xl:flex  xl:w-full border border-red-500 md:w-[70%]">
+          {sidebaricon === 0 ? (
+            <Icons />
+          ) : sidebaricon === 1 ? (
+            <Background />
+          ) : (
+            <Upgrade />
+          )}
+          <IconPreview />
+        </div>
       </div>
     </>
   );
