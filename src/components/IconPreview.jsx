@@ -37,3 +37,8 @@ export const IconPreview = () => {
 const Icons = ({ iconNode: LucideIcon, color, size, transform }) => {
   return <LucideIcon color={color} size={size} transform={transform} />;
 };
+
+import * as icons from "react-icons";
+
+const iconNames = Object.keys(icons);
+console.log(iconNames);
