@@ -11,7 +11,7 @@ export const ContextProvider = ({ children }) => {
   const [Rounded, setRounded] = useState(10);
   const [Padding, setPadding] = useState(0);
   const [bgColor, setbgColor] = useState("rgba(55,55,55,1)");
-
+  const [chooseIcon, setchooseIcon] = useState(false);
   const IconValue = {
     Size: `${size}px`,
     Rotation: `${Rotation}`,
@@ -47,6 +47,8 @@ export const ContextProvider = ({ children }) => {
     setPadding,
     bgColor,
     setbgColor,
+    chooseIcon,
+    setchooseIcon,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

@@ -1,5 +1,11 @@
 /* eslint-disable react/prop-types */
+import { IconName } from "./constant";
 import { FaRegSmile } from "react-icons/fa";
+import {} from "react-icons/fa";
+const Dynamicicon = "FaUssunnah";
+
+const selecticon = IconName[Dynamicicon];
+console.log(selecticon);
 
 export const IconPreview = () => {
   const Background = JSON.parse(localStorage.getItem("BgValue"));
@@ -22,7 +28,7 @@ export const IconPreview = () => {
         <div className=" IconPreviewContainer">
           <div style={styles} className="IconBacground">
             <Icons
-              iconNode={FaRegSmile}
+              iconNode={selecticon ? selecticon : FaRegSmile}
               color={iconStyle.Color}
               size={iconStyle.Size}
               transform={iconStyle.transform}
@@ -35,10 +41,9 @@ export const IconPreview = () => {
 };
 
 const Icons = ({ iconNode: LucideIcon, color, size, transform }) => {
-  return <LucideIcon color={color} size={size} transform={transform} />;
+  return (
+    <>
+      <LucideIcon color={color} size={size} transform={transform} />
+    </>
+  );
 };
-
-import * as icons from "react-icons";
-
-const iconNames = Object.keys(icons);
-console.log(iconNames);
