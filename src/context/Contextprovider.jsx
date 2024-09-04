@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { iconList } from "../components/constant";
 import { useState, useEffect } from "react";
 import { AppContext } from "./createcontext";
 
@@ -12,10 +13,13 @@ export const ContextProvider = ({ children }) => {
   const [Padding, setPadding] = useState(0);
   const [bgColor, setbgColor] = useState("rgba(55,55,55,1)");
   const [chooseIcon, setchooseIcon] = useState(false);
+  const [selecticon, setselecticon] = useState(0);
   const IconValue = {
     Size: `${size}px`,
     Rotation: `${Rotation}`,
     color: `${color}`,
+
+    smile: `${iconList[selecticon]}`,
   };
   useEffect(() => {
     localStorage.setItem("Value", JSON.stringify(IconValue));
@@ -49,6 +53,8 @@ export const ContextProvider = ({ children }) => {
     setbgColor,
     chooseIcon,
     setchooseIcon,
+    selecticon,
+    setselecticon,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

@@ -1,13 +1,15 @@
 /* eslint-disable react/prop-types */
-import { IconName } from "./constant";
 import { FaRegSmile } from "react-icons/fa";
-import {} from "react-icons/fa";
-const Dynamicicon = "FaUssunnah";
+import { AppContext } from "../context/createcontext";
 
-const selecticon = IconName[Dynamicicon];
-console.log(selecticon);
+import { iconList } from "./constant";
+import { useContext } from "react";
 
 export const IconPreview = () => {
+  const { selecticon } = useContext(AppContext);
+
+  const iconName = iconList[selecticon] || FaRegSmile;
+
   const Background = JSON.parse(localStorage.getItem("BgValue"));
 
   const styles = {
@@ -28,7 +30,7 @@ export const IconPreview = () => {
         <div className=" IconPreviewContainer">
           <div style={styles} className="IconBacground">
             <Icons
-              iconNode={selecticon ? selecticon : FaRegSmile}
+              iconNode={iconName}
               color={iconStyle.Color}
               size={iconStyle.Size}
               transform={iconStyle.transform}

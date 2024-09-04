@@ -22,7 +22,7 @@ export const Background = () => {
             max={100}
             onChange={(e) => {
               const newRounded = e.target.value;
-              console.log(newRounded);
+              // console.log(newRounded);
               setRounded(`${newRounded}`);
             }}
           />
@@ -39,7 +39,7 @@ export const Background = () => {
             max={100}
             onChange={(e) => {
               const newPadding = e.target.value;
-              console.log(newPadding);
+              // console.log(newPadding);
               setPadding(newPadding);
             }}
           />
