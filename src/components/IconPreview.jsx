@@ -28,7 +28,7 @@ export const IconPreview = () => {
     <>
       <main className="IconPreviewmain IconsMain">
         <div className=" IconPreviewContainer">
-          <div style={styles} className="IconBacground">
+          <div id="Downloadicon" style={styles} className="IconBacground">
             <Icons
               iconNode={iconName}
               color={iconStyle.Color}

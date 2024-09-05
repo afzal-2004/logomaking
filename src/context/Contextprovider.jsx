@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import html2canvas from "html2canvas";
 import { iconList } from "../components/constant";
 import { useState, useEffect } from "react";
 import { AppContext } from "./createcontext";
@@ -14,6 +15,7 @@ export const ContextProvider = ({ children }) => {
   const [bgColor, setbgColor] = useState("rgba(55,55,55,1)");
   const [chooseIcon, setchooseIcon] = useState(false);
   const [selecticon, setselecticon] = useState(0);
+  const [Logo, setLogo] = useState();
   const IconValue = {
     Size: `${size}px`,
     Rotation: `${Rotation}`,
@@ -36,6 +38,26 @@ export const ContextProvider = ({ children }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [Rounded, Padding, bgColor]);
 
+  useEffect(() => {
+    console.log("BtnClicked");
+    setLogo();
+  }, [Logo]);
+  const Downloadicon = () => {
+    const Download = document.getElementById("Downloadicon");
+
+    html2canvas(Download, {
+      backgroundColor: null,
+    }).then(function (canvas) {
+      const pngImage = canvas.toDataURL("images/png");
+      const downloadLink = document.createElement("a");
+      downloadLink.href = pngImage;
+      downloadLink.download = "logo.png";
+      downloadLink.click();
+    });
+    console.log(Download);
+    console.log("btn CLicked");
+  };
+
   const value = {
     setsidebaricon,
     sidebaricon,
@@ -55,6 +77,7 @@ export const ContextProvider = ({ children }) => {
     setchooseIcon,
     selecticon,
     setselecticon,
+    Downloadicon,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
