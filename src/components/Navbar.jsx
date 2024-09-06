@@ -6,10 +6,10 @@ export const Navbar = () => {
   const { Downloadicon } = useContext(AppContext);
   return (
     <>
-      <ul className=" bg-slate-400 flex  justify-between p-4  items-center">
+      <ul className=" bg-slate-400 flex  justify-between p-4  items-center ">
         <li className="utilityClass gap-3">
           <img src={logo} alt="" />
-          <h1 className="text-[20px]">Editior</h1>
+          <h1 className="text-[20px]"> Icon Editior</h1>
         </li>
         <li>
           <button

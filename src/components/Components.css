@@ -1,10 +1,10 @@
 .sidebarmain {
-    @apply xl:min-w-[20%] md:min-w-[30%] h-[90vh] bg-red-200 mr-1;
+    @apply min-w-[100vw] sm:min-w-[40%] xl:min-w-[20%] md:min-w-[30%] h-full sm:h-[90vh] bg-red-200 mr-1 gap-5;
     box-shadow: 2px 2px 2px slategray;
 }
 
 .IconsMain {
-    @apply bg-slate-200 p-5 xl:w-[50%] overflow-scroll md:h-[45vh] xl:h-[90vh] overflow-x-hidden;
+    @apply bg-slate-200 max-w-[100%] sm:p-5 xl:w-[50%] overflow-scroll md:h-[45vh] xl:h-[90vh] overflow-x-hidden;
 }
 
 .IconsMain::-webkit-scrollbar {
@@ -20,7 +20,7 @@
 }
 
 .IconPreviewContainer {
-    @apply bg-blue-300 w-[350px] h-[350px] flex justify-center items-center;
+    @apply bg-red-300 w-[200px] h-[200px] sm:w-[350px] sm:h-[350px] flex justify-center items-center;
 }
 
 .IconBacground {

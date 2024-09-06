@@ -22,7 +22,7 @@ export const Icons = () => {
   const Icon = iconList[selecticon] || Smile;
   return (
     <>
-      <div className="IconsMain  relative">
+      <div className="IconsMain  max-h-[90vh] relative ">
         <h1 className="text-[19px]"> Icons</h1>
 
         <Icon
@@ -32,9 +32,9 @@ export const Icons = () => {
         />
         {chooseIcon && <IconList />}
 
-        <div>
-          <div className=" mt-5  ">
-            <p className=" flex  justify-between">
+        <div className=" max-w-[100vw]">
+          <div className=" mt-5 w-full  ">
+            <p className=" flex  justify-between  max-w-full">
               size
               <span>{size}px</span>
             </p>
@@ -77,7 +77,7 @@ export const Icons = () => {
             />
           </div>
         </div>
-        <div className=" mt-5 flex justify-center  z-0  ">
+        <div className=" mt-5 flex   z-0   max-w-[100vw]  justify-center  ">
           <ColorPicker
             value={color}
             onChange={setColor}

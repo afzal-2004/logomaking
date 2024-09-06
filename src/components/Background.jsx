@@ -7,15 +7,15 @@ export const Background = () => {
     useContext(AppContext);
   return (
     <>
-      <div className="IconsMain ">
-        <div>
+      <div className="IconsMain p-3 ">
+        <div className=" ">
           <p className="flex justify-between">
             Rounded <span>{Rounded}px</span>
           </p>
 
           <input
             type="range"
-            className="w-full"
+            className="sm:w-full"
             name="Rounded"
             value={Rounded}
             id=""
