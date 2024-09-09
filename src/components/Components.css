@@ -1,5 +1,5 @@
 .sidebarmain {
-    @apply min-w-[100vw] sm:min-w-[40%] xl:min-w-[20%] md:min-w-[30%] h-full sm:h-[90vh] bg-red-200 mr-1 gap-5;
+    @apply min-w-[100vw] sm:min-w-[40%] xl:min-w-[20%] md:min-w-[30%] h-full sm:h-[90vh] mr-1 gap-5;
     box-shadow: 2px 2px 2px slategray;
 }
 
