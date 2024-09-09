@@ -19,9 +19,9 @@ export const IconPreview = () => {
   };
   const IconsValue = JSON.parse(localStorage.getItem("Value"));
   const iconStyle = {
-    Color: IconsValue.color,
-    Size: IconsValue.Size,
-    transform: `rotate(${IconsValue.Rotation})`,
+    Color: IconsValue?.color || "white",
+    Size: IconsValue?.Size || "33px",
+    transform: `rotate(${IconsValue?.Rotation})`,
   };
 
   return (
