@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Navbar } from "./components/Navbar";
 import { Sidebar } from "./components/Sidebar";
 import { IconPreview } from "./components/IconPreview";
-import { AppContext } from "./context/createcontext";
+import { AppContext } from "./context/Context";
 import { Icons } from "./components/Icons";
 import { Background } from "./components/Background";
 import { Upgrade } from "./components/About";

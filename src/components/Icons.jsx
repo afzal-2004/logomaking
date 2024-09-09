@@ -1,6 +1,6 @@
 import { Smile } from "lucide-react";
 
-import { AppContext } from "../context/createcontext";
+import { AppContext } from "../context/Context";
 import { useContext } from "react";
 import ColorPicker from "react-best-gradient-color-picker";
 import { iconList } from "./constant";

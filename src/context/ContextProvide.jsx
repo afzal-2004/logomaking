@@ -2,7 +2,8 @@
 import html2canvas from "html2canvas";
 import { iconList } from "../components/constant";
 import { useState, useEffect } from "react";
-import { AppContext } from "./createcontext";
+// import { AppContext } from "./Createcontext";
+import { AppContext } from "./Context";
 
 export const ContextProvider = ({ children }) => {
   const [sidebaricon, setsidebaricon] = useState(0);

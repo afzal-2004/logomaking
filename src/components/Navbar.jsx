@@ -1,6 +1,6 @@
 import { ArrowDownToLine } from "lucide-react";
 import logo from "/logo.svg";
-import { AppContext } from "../context/createcontext";
+import { AppContext } from "../context/Context";
 import { useContext } from "react";
 export const Navbar = () => {
   const { Downloadicon } = useContext(AppContext);

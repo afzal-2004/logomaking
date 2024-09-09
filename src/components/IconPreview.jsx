@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { FaRegSmile } from "react-icons/fa";
-import { AppContext } from "../context/createcontext";
+import { AppContext } from "../context/Context";
 
 import { iconList } from "./constant";
 import { useContext } from "react";

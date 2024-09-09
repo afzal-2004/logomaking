@@ -2,7 +2,7 @@ import { TbIcons } from "react-icons/tb";
 import { LiaImageSolid } from "react-icons/lia";
 import { FaExclamationCircle } from "react-icons/fa";
 
-import { AppContext } from "../context/createcontext";
+import { AppContext } from "../context/Context";
 import { useContext } from "react";
 import "./Components.css";
 export const Sidebar = () => {

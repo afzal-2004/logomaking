@@ -1,6 +1,6 @@
 import "./Components.css";
 import ColorPicker from "react-best-gradient-color-picker";
-import { AppContext } from "../context/createcontext";
+import { AppContext } from "../context/Context";
 import { useContext } from "react";
 export const Background = () => {
   const { Rounded, setRounded, Padding, setPadding, setbgColor } =
