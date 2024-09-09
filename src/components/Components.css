@@ -12,7 +12,7 @@
 }
 
 .Iconsinput {
-    @apply border border-red-500 xl:w-full md:w-[50%];
+    @applyxl: w-full md:w-[50%];
 }
 
 .IconPreviewmain {
@@ -20,7 +20,7 @@
 }
 
 .IconPreviewContainer {
-    @apply bg-red-300 w-[200px] h-[200px] sm:w-[350px] sm:h-[350px] flex justify-center items-center;
+    @apply w-[200px] h-[200px] sm:w-[350px] sm:h-[350px] flex justify-center items-center;
 }
 
 .IconBacground {
