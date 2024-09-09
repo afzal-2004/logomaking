@@ -13,9 +13,9 @@ export const IconPreview = () => {
   const Background = JSON.parse(localStorage.getItem("BgValue"));
 
   const styles = {
-    backgroundColor: Background.bgColor,
-    borderRadius: Background.Rounded,
-    padding: Background.Padding,
+    backgroundColor: Background.bgColor || "red",
+    borderRadius: Background.Rounded || "0px",
+    padding: Background.Padding || "0px",
   };
   const IconsValue = JSON.parse(localStorage.getItem("Value"));
   const iconStyle = {
